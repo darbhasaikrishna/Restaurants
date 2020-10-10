@@ -1,0 +1,11 @@
+<div class="card" style="width: 18rem; max-height: 20rem;margin: 1rem; padding: 1rem">
+    <h5>{{card.name}}</h5>
+    <img class="card-img-top" src="{{card.image_url}}" style="height: 100px; width: 100px" alt="Card image cap">
+    <div class="card-body">
+     <div><span class="font-weight-bold">Address:</span> <span class="card-text">{{card.address}}</span></div>
+     <div> <span class="font-weight-bold">Area</span> <span class="card-text">{{card.area}}</span></div>
+     <div> <span class="font-weight-bold">Phone</span> <span class="card-text">{{card.phone}}</span></div>
+    </div>
+
+    <button class="{{card.buttonClass}} mt-2" (click)= "onAction(card.id, card.buttontext)">{{card.buttontext}}</button>
+  </div>

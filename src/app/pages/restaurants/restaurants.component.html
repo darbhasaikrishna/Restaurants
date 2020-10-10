@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <form [formGroup]="restaurants">
+
+                <label>
+                    city:
+                    <input type="text" formControlName="city">
+                </label>
+
+                <label>
+                    other:
+                    <input type="text" formControlName="other">
+                </label>
+                <button class="btn btn-success ml-3" (click)="onSearch()"> Search</button>
+            </form>
+        </div>
+        <div *ngIf="!loaded else noResult">Loading.....</div>
+        <ng-container *ngIf="list.length > 0 ">
+
+            <div class="flex-container">
+                <ng-container *ngFor="let card of list">
+                    <card [card]="card" (action)="onAdd($event)"></card>
+                </ng-container>
+            </div>
+
+        </ng-container>
+        <ng-template #noResult>
+            <div>Please search</div>
+        </ng-template>
+    </div>
+</div>

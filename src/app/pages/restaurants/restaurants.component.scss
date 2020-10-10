@@ -1,0 +1,14 @@
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #d3d3d36e;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+.flex-container > div {
+    height: 200px;
+    width: 150px;
+    margin: 1rem;
+    border-radius: 3px;
+}
